@@ -15,7 +15,7 @@ def test_handle_form():
 	response = client.get("/submitform")
 
 	if response.status_code != 200:
-		raise TypeError(status_code=400, detail="homepage did not load")
-	else:
-		response = client.post("/submitform", fname=Form(...), content_type="application/x-www-form-urlencoded")
-		return response
+		raise TypeError(status_code=400, detail="invalid submition")
+# 	else:
+# 		response = client.post("/submitform", fname=Form(...), content_type="application/x-www-form-urlencoded")
+# 		return response
